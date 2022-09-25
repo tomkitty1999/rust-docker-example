@@ -1,10 +1,8 @@
-FROM rust:latest
+FROM nginx:latest
 
-ADD . /source
-WORKDIR /source
+Copy static /usr/share/nginx/html
 
 EXPOSE 8080
-RUN rustc -V
 
-RUN cargo build --release
-CMD cargo run --release
+
+CMD ["nginx", "-g", "daemon off;"]
