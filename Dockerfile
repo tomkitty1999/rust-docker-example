@@ -1,8 +1,8 @@
-FROM nginx:1.22-alpine
+FROM tomcat:8.5.82-jdk8-corretto-al2
 
 Copy static /usr/share/nginx/html
 
-EXPOSE 80
+EXPOSE 8080
 
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["catalina.sh" "run"]
