@@ -5,4 +5,4 @@ FROM tomcat:8.5.82-jdk8-corretto-al2
 EXPOSE 8080
 
 
-CMD ["catalina.sh" "run"]
+CMD ["/usr/local/tomcat/catalina.sh" "run"]
