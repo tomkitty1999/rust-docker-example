@@ -9,4 +9,4 @@ WORKDIR $CATALINA_HOME
 EXPOSE 8080
 
 
-CMD ["/usr/local/tomcat/catalina.sh" "run"]
+CMD ["catalina.sh" "run"]
